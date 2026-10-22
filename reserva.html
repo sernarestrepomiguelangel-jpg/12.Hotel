@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <title>Reserva del hotel</title>
+</head>
+<body>
+   <h1>Haga su reserva</h1>
+   <form action="procesareserva.php" method="GET">
+   <fieldset>
+       <legend>Datos Personales</legend>
+       <label for="nombre">Nombre:</label>
+       <input type="text" id="nombre" name="nombre"
+               maxlength="100" required autofocus>
+       <br><br>
+       <label for="apellidos">Apellidos:</label>
+       <input type="text" id="apellidos" name="apellidos"
+               maxlength="100" required>
+       <br><br>
+       <label for="dni">DNI:</label>
+       <input type="text" id="dni" name="dni"
+               maxlength="10" placeholder="DNI con letra" required>
+   </fieldset>
+       <br>
+       <fieldset>
+       <legend>Datos de su reserva</legend>
+       <p>Habitación:</p>
+       <input type="radio" id="individual" name="Habitación"
+              value="Individual" required>
+       <label for="individual">Individual</label>
+       <input type="radio" id="doble" name="Habitación"
+              value="Doble">
+       <label for="doble">Doble</label>
+       <input type="radio" id="triple" name="Habitación"
+              value="Triple">
+       <label for="triple">Triple</label>
+       <br><br>
+       <label for="personas">Número de personas:</label>
+       <select id="personas" name="personas">
+           <option value="1">1</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+       </select>
+       <br><br>
+       <input type="checkbox" id="mascotas" name="mascotas"
+              value="Si">
+       <label for="mascotas">Llevo mascotas</label>
+       <br><br>
+       <label for="fecha">Fecha de llegada:</label>
+       <input type="date" id="fecha" name="fecha">
+       <br><br>
+       <label for="hora">Hora de llegada:</label>
+       <input type="time" id="hora" name="hora">
+   </fieldset>
+   <br>
+   <input type="submit" value="Enviar">
+   <input type="reset" value="Reiniciar">
+   </form>
+   <p>
+       <a href="index.html">Volver</a>
+   </p>
+</body>
+</html>
